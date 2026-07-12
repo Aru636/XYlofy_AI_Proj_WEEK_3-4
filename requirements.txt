@@ -1,9 +1,4 @@
 streamlit
-pandas
+pandas==3.0.3
 numpy
 plotly
-matplotlib
-scikit-learn
-xgboost
-statsmodels
-joblib
