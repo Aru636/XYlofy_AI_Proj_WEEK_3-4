@@ -1,11 +1,11 @@
-Streamlit==1.52.2
+Streamlit
 
-Plotly==6.8.0
+Plotly
 
 Pandas==2.1.3
 
-Matplotlib==3.8.2
+Matplotlib
 
-Joblib==1.3.2
+Joblib
 
-Scikit-learn==1.6.1
+Scikit-learn
