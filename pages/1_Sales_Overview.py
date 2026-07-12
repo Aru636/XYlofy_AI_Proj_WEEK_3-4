@@ -69,7 +69,7 @@ fig = px.bar(
     title="Total Sales by Year"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # Monthly Sales Trend
 
@@ -89,7 +89,7 @@ fig = px.line(
     title="Monthly Sales Trend"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # Sales by Region
 
@@ -107,7 +107,7 @@ fig = px.pie(
     title="Sales by Region"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # Sales by Category
 
@@ -126,4 +126,4 @@ fig = px.bar(
     title="Sales by Category"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')

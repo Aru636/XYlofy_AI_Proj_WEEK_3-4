@@ -35,7 +35,7 @@ fig.update_layout(
     title="Isolation Forest Anomaly Detection"
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # z-score plot
 fig2 = go.Figure()
@@ -61,21 +61,21 @@ fig2.update_layout(
     title="Rolling Z-score Detection"
 )
 
-st.plotly_chart(fig2, use_container_width=True)
+st.plotly_chart(fig2, width='stretch')
 
 # Tables
 st.subheader("Isolation Forest Anomalies")
 
 st.dataframe(
     iso[["Order Date", "Sales"]],
-    use_container_width=True
+    width='stretch'
 )
 
 st.subheader("Rolling Z-score Anomalies")
 
 st.dataframe(
     z[["Order Date", "Sales"]],
-    use_container_width=True
+    width='stretch'
 )
 
 # Summary Cards

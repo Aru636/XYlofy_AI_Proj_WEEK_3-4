@@ -32,7 +32,7 @@ fig = px.scatter(
 
 fig.update_traces(textposition="top center")
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # Cluster Table
 
@@ -48,7 +48,7 @@ st.dataframe(
             "YoYGrowth"
         ]
     ],
-    use_container_width=True
+    width='stretch'
 )
 
 # Inventory Recommendations
