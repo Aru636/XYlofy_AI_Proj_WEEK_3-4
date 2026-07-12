@@ -1,0 +1,11 @@
+Streamlit
+
+Plotly
+
+Pandas
+
+Matplotlib
+
+Joblib
+
+Scikit-learn
