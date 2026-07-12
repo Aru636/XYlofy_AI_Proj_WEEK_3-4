@@ -6,10 +6,14 @@ st.set_page_config(layout="wide")
 
 st.title("📊 Sales Overview Dashboard")
 
-df = pd.read_csv(
-    "data/Sample - Superstore.csv",
-    parse_dates=["Order Date"]
-)
+@st.cache_data
+def load_data():
+    df = pd.read_csv("data/Sample - Superstore.csv")
+    df["Order Date"] = pd.to_datetime(df["Order Date"], dayfirst=True)
+    df["Ship Date"] = pd.to_datetime(df["Ship Date"], dayfirst=True)
+    return df
+
+df = load_data()
 
 df['Order Date'] = pd.to_datetime(df['Order Date'],format="%d/%m/%Y")
 df['Ship Date'] = pd.to_datetime(df['Ship Date'],format="%d/%m/%Y")
@@ -26,7 +30,6 @@ col1, col2, col3 = st.columns(3)
 col1.metric("Total Sales", f"${total_sales:,.0f}")
 col2.metric("Total Orders", f"{total_orders:,}")
 col3.metric("Average Order Value", f"${avg_sales:,.2f}")
-# col4.metric("Average Profit", f"${avg_profit:,.2f}")
 
 
 # Sidebar filter

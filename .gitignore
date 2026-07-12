@@ -220,4 +220,4 @@ __marimo__/
 # spec folder and files
 train.csv
 vgsales.csv
-
+*.ipynb
