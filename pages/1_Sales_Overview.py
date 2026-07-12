@@ -76,7 +76,7 @@ st.plotly_chart(fig, use_container_width=True)
 monthly = (
     filtered
     .set_index("Order Date")
-    .resample("M")["Sales"]
+    .resample("ME")["Sales"]
     .sum()
     .reset_index()
 )
